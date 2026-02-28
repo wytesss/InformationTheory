@@ -1,4 +1,4 @@
-﻿namespace lab1
+namespace lab1
 {
     partial class Form1
     {
@@ -52,9 +52,10 @@
             // 
             LoadFromFileCheckBox.AutoSize = true;
             LoadFromFileCheckBox.Cursor = Cursors.Hand;
+            LoadFromFileCheckBox.Font = new Font("Bahnschrift SemiLight", 9F);
             LoadFromFileCheckBox.Location = new Point(9, 26);
             LoadFromFileCheckBox.Name = "LoadFromFileCheckBox";
-            LoadFromFileCheckBox.Size = new Size(173, 24);
+            LoadFromFileCheckBox.Size = new Size(173, 22);
             LoadFromFileCheckBox.TabIndex = 0;
             LoadFromFileCheckBox.Text = "Загрузить из файла?";
             LoadFromFileCheckBox.UseVisualStyleBackColor = true;
@@ -63,9 +64,10 @@
             // 
             SaveToFileCheckBox.AutoSize = true;
             SaveToFileCheckBox.Cursor = Cursors.Hand;
+            SaveToFileCheckBox.Font = new Font("Bahnschrift SemiLight", 9F);
             SaveToFileCheckBox.Location = new Point(9, 56);
             SaveToFileCheckBox.Name = "SaveToFileCheckBox";
-            SaveToFileCheckBox.Size = new Size(163, 24);
+            SaveToFileCheckBox.Size = new Size(162, 22);
             SaveToFileCheckBox.TabIndex = 1;
             SaveToFileCheckBox.Text = "Сохранить в файл?";
             SaveToFileCheckBox.UseVisualStyleBackColor = true;
@@ -73,26 +75,31 @@
             // EncryptButton
             // 
             EncryptButton.Cursor = Cursors.Hand;
+            EncryptButton.Font = new Font("Bahnschrift SemiLight", 9F);
             EncryptButton.Location = new Point(268, 37);
             EncryptButton.Name = "EncryptButton";
             EncryptButton.Size = new Size(163, 29);
             EncryptButton.TabIndex = 2;
             EncryptButton.Text = "Зашифровать";
             EncryptButton.UseVisualStyleBackColor = true;
+            EncryptButton.Click += EncryptButton_Click;
             // 
             // DecryptButton
             // 
             DecryptButton.Cursor = Cursors.Hand;
+            DecryptButton.Font = new Font("Bahnschrift SemiLight", 9F);
             DecryptButton.Location = new Point(9, 37);
             DecryptButton.Name = "DecryptButton";
             DecryptButton.Size = new Size(162, 29);
             DecryptButton.TabIndex = 3;
             DecryptButton.Text = "Расшифровать";
             DecryptButton.UseVisualStyleBackColor = true;
+            DecryptButton.Click += DecryptButton_Click;
             // 
             // PlainTextBox
             // 
             PlainTextBox.Cursor = Cursors.IBeam;
+            PlainTextBox.Font = new Font("Bahnschrift SemiLight", 9F);
             PlainTextBox.Location = new Point(37, 52);
             PlainTextBox.Multiline = true;
             PlainTextBox.Name = "PlainTextBox";
@@ -102,6 +109,7 @@
             // CipherTextBox
             // 
             CipherTextBox.Cursor = Cursors.IBeam;
+            CipherTextBox.Font = new Font("Bahnschrift SemiLight", 9F);
             CipherTextBox.Location = new Point(37, 361);
             CipherTextBox.Multiline = true;
             CipherTextBox.Name = "CipherTextBox";
@@ -111,6 +119,7 @@
             // KeyTextBox
             // 
             KeyTextBox.Cursor = Cursors.IBeam;
+            KeyTextBox.Font = new Font("Bahnschrift SemiLight", 9F);
             KeyTextBox.Location = new Point(816, 52);
             KeyTextBox.Multiline = true;
             KeyTextBox.Name = "KeyTextBox";
@@ -120,18 +129,20 @@
             // KeyLabel
             // 
             KeyLabel.AutoSize = true;
+            KeyLabel.Font = new Font("Bahnschrift SemiLight", 9F);
             KeyLabel.Location = new Point(997, 29);
             KeyLabel.Name = "KeyLabel";
-            KeyLabel.Size = new Size(46, 20);
+            KeyLabel.Size = new Size(46, 18);
             KeyLabel.TabIndex = 7;
             KeyLabel.Text = "Ключ";
             // 
             // PlainTextLabel
             // 
             PlainTextLabel.AutoSize = true;
+            PlainTextLabel.Font = new Font("Bahnschrift SemiLight", 9F);
             PlainTextLabel.Location = new Point(340, 29);
             PlainTextLabel.Name = "PlainTextLabel";
-            PlainTextLabel.Size = new Size(118, 20);
+            PlainTextLabel.Size = new Size(121, 18);
             PlainTextLabel.TabIndex = 8;
             PlainTextLabel.Text = "Исходный текст";
             // 
@@ -139,19 +150,21 @@
             // 
             CipherTextLabel.AutoSize = true;
             CipherTextLabel.FlatStyle = FlatStyle.System;
-            CipherTextLabel.Location = new Point(328, 338);
+            CipherTextLabel.Font = new Font("Bahnschrift SemiLight", 9F);
+            CipherTextLabel.Location = new Point(365, 340);
             CipherTextLabel.Name = "CipherTextLabel";
-            CipherTextLabel.Size = new Size(146, 20);
+            CipherTextLabel.Size = new Size(76, 18);
             CipherTextLabel.TabIndex = 9;
-            CipherTextLabel.Text = "Получите результат";
+            CipherTextLabel.Text = "Результат";
             // 
             // DecimalChoice
             // 
             DecimalChoice.AutoSize = true;
             DecimalChoice.Cursor = Cursors.Hand;
+            DecimalChoice.Font = new Font("Bahnschrift SemiLight", 9F);
             DecimalChoice.Location = new Point(9, 35);
             DecimalChoice.Name = "DecimalChoice";
-            DecimalChoice.Size = new Size(160, 24);
+            DecimalChoice.Size = new Size(157, 22);
             DecimalChoice.TabIndex = 10;
             DecimalChoice.TabStop = true;
             DecimalChoice.Text = "Метод Децимаций";
@@ -161,9 +174,10 @@
             // 
             VigenerChoice.AutoSize = true;
             VigenerChoice.Cursor = Cursors.Hand;
+            VigenerChoice.Font = new Font("Bahnschrift SemiLight", 9F);
             VigenerChoice.Location = new Point(268, 35);
             VigenerChoice.Name = "VigenerChoice";
-            VigenerChoice.Size = new Size(149, 24);
+            VigenerChoice.Size = new Size(147, 22);
             VigenerChoice.TabIndex = 11;
             VigenerChoice.TabStop = true;
             VigenerChoice.Text = "Метод Виженера";
@@ -173,6 +187,7 @@
             // 
             ProcessGroupBox.Controls.Add(DecryptButton);
             ProcessGroupBox.Controls.Add(EncryptButton);
+            ProcessGroupBox.Font = new Font("Bahnschrift SemiLight", 9F);
             ProcessGroupBox.Location = new Point(816, 545);
             ProcessGroupBox.Name = "ProcessGroupBox";
             ProcessGroupBox.Size = new Size(437, 85);
@@ -184,6 +199,7 @@
             // 
             SettingsGroupBox.Controls.Add(LoadFromFileCheckBox);
             SettingsGroupBox.Controls.Add(SaveToFileCheckBox);
+            SettingsGroupBox.Font = new Font("Bahnschrift SemiLight", 9F);
             SettingsGroupBox.Location = new Point(816, 441);
             SettingsGroupBox.Name = "SettingsGroupBox";
             SettingsGroupBox.Size = new Size(437, 98);
@@ -195,6 +211,7 @@
             // 
             MethodGroupBox.Controls.Add(DecimalChoice);
             MethodGroupBox.Controls.Add(VigenerChoice);
+            MethodGroupBox.Font = new Font("Bahnschrift SemiLight", 9F);
             MethodGroupBox.Location = new Point(816, 361);
             MethodGroupBox.Name = "MethodGroupBox";
             MethodGroupBox.Size = new Size(437, 74);
@@ -217,7 +234,7 @@
             Controls.Add(CipherTextBox);
             Controls.Add(PlainTextBox);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Криптография";
             ProcessGroupBox.ResumeLayout(false);
             SettingsGroupBox.ResumeLayout(false);
             SettingsGroupBox.PerformLayout();
