@@ -100,6 +100,19 @@ namespace lab1
             return key;
         }
 
+        // Извлечь число из строки ключа децимации (только цифры, лишние символы игнорируются)
+        private static string ExtractDigits(string text)
+        {
+            if (text == null) return string.Empty;
+            var sb = new StringBuilder(text.Length);
+            foreach (char c in text)
+            {
+                if (char.IsDigit(c) || (c == '-' && sb.Length == 0))
+                    sb.Append(c);
+            }
+            return sb.ToString();
+        }
+
         // Шифрование Виженера с автоключом: добавляем к пользовательскому ключу исходный текст и обрезаем до нужной длины
         private string VigenerAutoEncrypt(string plain, string userKey)
         {
@@ -193,7 +206,8 @@ namespace lab1
                 string result;
                 if (DecimalChoice.Checked)                // выбран метод децимации?
                 {
-                    if (!int.TryParse(keyText, out int k))
+                    string keyDigits = ExtractDigits(keyText);
+                    if (!int.TryParse(keyDigits, out int k))
                     {
                         MessageBox.Show("Для метода децимаций ключ должен быть целым числом.");
                         return;
@@ -233,7 +247,8 @@ namespace lab1
                 string result;
                 if (DecimalChoice.Checked)                // децимация?
                 {
-                    if (!int.TryParse(keyText, out int k))
+                    string keyDigits = ExtractDigits(keyText);
+                    if (!int.TryParse(keyDigits, out int k))
                     {
                         MessageBox.Show("Для метода децимаций ключ должен быть целым числом.");
                         return;
